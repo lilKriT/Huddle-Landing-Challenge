@@ -1,6 +1,5 @@
 import { LitElement, css, html } from "lit";
-// import litLogo from './assets/lit.svg'
-// import bgDesktop from "../assets/images/bg-hero-desktop.svg";
+import heroImage from "../assets/images/illustration-mockups.svg";
 
 export class HHero extends LitElement {
   static get properties() {
@@ -21,9 +20,12 @@ export class HHero extends LitElement {
 
   render() {
     return html`<div class="hero">
-      <h2>${this.header}</h2>
-      <p>${this.text}</p>
-      <a href="#">${this.buttonText}</a>
+      <div>
+        <h2>${this.header}</h2>
+        <p>${this.text}</p>
+        <a href="#">${this.buttonText}</a>
+      </div>
+      <img src="${heroImage}" />
     </div>`;
   }
 
@@ -37,7 +39,11 @@ export class HHero extends LitElement {
 
       .hero {
         min-height: 100vh;
-        outline: 1px solid red;
+        outline: 1px solid blue;
+        background: var(--heroBGimage) var(--veryPaleCyan);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     `;
   }

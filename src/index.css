@@ -45,6 +45,14 @@ For the social icons, you can use a font icon library. Some suggestions can be f
 - [Ionicons](https://ionicons.com/)
  */
 
+:root {
+  --veryPaleCyan: hsl(193, 100%, 96%);
+  --veryDarkCyan: hsl(192, 100%, 9%);
+  --grayishBlue: hsl(208, 11%, 55%);
+
+  --heroBGimage: url("src/assets/images/bg-hero-desktop.svg");
+}
+
 * {
   margin: 0;
   padding: 0;
