@@ -46,6 +46,12 @@ For the social icons, you can use a font icon library. Some suggestions can be f
  */
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
   font-family: "Open Sans", sans-serif;
-  outline: 1px solid blue;
+  /* outline: 1px solid blue; */
 }

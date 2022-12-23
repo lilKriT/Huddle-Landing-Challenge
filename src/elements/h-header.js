@@ -13,7 +13,15 @@ export class HHeader extends LitElement {
   }
 
   render() {
-    return html` <header>Header text: ${this.text}</header> `;
+    return html`<header>Header text: ${this.text}</header> `;
+  }
+
+  static get styles() {
+    return css`
+      header {
+        background: yellow;
+      }
+    `;
   }
 }
 
