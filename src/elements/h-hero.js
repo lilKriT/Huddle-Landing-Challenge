@@ -1,4 +1,6 @@
 import { LitElement, css, html } from "lit";
+// import litLogo from './assets/lit.svg'
+// import bgDesktop from "../assets/images/bg-hero-desktop.svg";
 
 export class HHero extends LitElement {
   static get properties() {
@@ -13,7 +15,15 @@ export class HHero extends LitElement {
   }
 
   render() {
-    return html` <header>Header text: ${this.text}</header> `;
+    return html` <div>Header text: ${this.text}</div> `;
+  }
+
+  static get styles() {
+    return css`
+      div {
+        background: red;
+      }
+    `;
   }
 }
 
