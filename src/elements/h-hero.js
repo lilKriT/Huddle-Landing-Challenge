@@ -1,4 +1,9 @@
 import { LitElement, css, html } from "lit";
+// import {
+//   LitElement,
+//   css,
+//   html,
+// } from "https://unpkg.com/@polymer/lit-element@latest/lit-element.js?module";
 import heroImage from "/src/assets/images/illustration-mockups.svg";
 
 export class HHero extends LitElement {

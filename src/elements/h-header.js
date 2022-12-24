@@ -1,4 +1,6 @@
-import { LitElement, css, html } from "lit";
+// import { LitElement, css, html } from "lit";
+import { LitElement, css, html } from "/node_modules/.vite/deps/lit";
+// import { LitElement, css, html } from "../../node_modules/.vite/deps/lit";
 
 export class HHeader extends LitElement {
   static get properties() {
