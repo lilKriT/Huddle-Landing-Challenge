@@ -70,12 +70,14 @@ export class HHero extends LitElement {
       }
 
       h2 {
-        font-family: "Poppins", sans-serif;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
         font-size: 2rem;
       }
 
       p {
-        font-family: "Open Sans", sans-serif;
+        font-family: "Poppins", sans-serif;
+        color: var(--veryDarkCyan);
       }
 
       a {
@@ -84,7 +86,9 @@ export class HHero extends LitElement {
         background: var(--pink);
         display: inline-block;
         border-radius: 1000px;
-        padding: 10px 20px;
+        padding: 0.75rem 2.5rem;
+        font-size: 0.875rem;
+        font-weight: 700;
       }
 
       a:hover {
