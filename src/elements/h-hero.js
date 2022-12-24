@@ -1,5 +1,5 @@
 import { LitElement, css, html } from "lit";
-import heroImage from "../assets/images/illustration-mockups.svg";
+import heroImage from "/src/assets/images/illustration-mockups.svg";
 
 export class HHero extends LitElement {
   static get properties() {
@@ -20,12 +20,14 @@ export class HHero extends LitElement {
 
   render() {
     return html`<div class="hero">
-      <div>
-        <h2>${this.header}</h2>
-        <p>${this.text}</p>
-        <a href="#">${this.buttonText}</a>
+      <div class="wrapper">
+        <div class="content">
+          <h2>${this.header}</h2>
+          <p>${this.text}</p>
+          <a href="#">${this.buttonText}</a>
+        </div>
+        <img src="${heroImage}" />
       </div>
-      <img src="${heroImage}" />
     </div>`;
   }
 
@@ -35,15 +37,62 @@ export class HHero extends LitElement {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-size: 1.125rem;
+        transition: all var(--animationTime) ease-in-out;
       }
 
       .hero {
-        min-height: 100vh;
         outline: 1px solid blue;
         background: var(--heroBGimage) var(--veryPaleCyan);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        display: flex;
+        justify-content: center;
+        padding: 6rem 0;
+      }
+
+      .wrapper {
+        max-width: var(--ww);
+        outline: 1px solid blue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .content {
+        width: 50%;
+        padding-right: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.625rem;
+      }
+
+      h2 {
+        font-family: "Poppins", sans-serif;
+        font-size: 2rem;
+      }
+
+      p {
+        font-family: "Open Sans", sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        background: var(--pink);
+        display: inline-block;
+        border-radius: 1000px;
+        padding: 10px 20px;
+      }
+
+      a:hover {
+        background: var(--pinkPale);
+      }
+
+      img {
+        width: 50%;
       }
     `;
   }
