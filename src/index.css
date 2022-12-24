@@ -1,3 +1,28 @@
+:root {
+  --pink: hsl(322, 100%, 66%);
+  --pinkPale: hsl(322, 100%, 75%);
+  --veryPaleCyan: hsl(193, 100%, 96%);
+  --veryDarkCyan: hsl(192, 100%, 9%);
+  --grayishBlue: hsl(208, 11%, 55%);
+
+  --heroBGimage: url("src/assets/images/bg-hero-desktop.svg");
+
+  --ww: 1200px;
+
+  --animationTime: 300ms;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  /* outline: 1px solid blue; */
+}
+
 /* 
 # Front-end Style Guide
 
@@ -44,28 +69,3 @@ For the social icons, you can use a font icon library. Some suggestions can be f
 - [IcoMoon](https://icomoon.io/)
 - [Ionicons](https://ionicons.com/)
  */
-
-:root {
-  --pink: hsl(322, 100%, 66%);
-  --pinkPale: hsl(322, 100%, 75%);
-  --veryPaleCyan: hsl(193, 100%, 96%);
-  --veryDarkCyan: hsl(192, 100%, 9%);
-  --grayishBlue: hsl(208, 11%, 55%);
-
-  --heroBGimage: url("src/assets/images/bg-hero-desktop.svg");
-
-  --ww: 1200px;
-
-  --animationTime: 300ms;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Open Sans", sans-serif;
-  /* outline: 1px solid blue; */
-}

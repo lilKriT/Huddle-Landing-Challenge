@@ -6,11 +6,13 @@ export default defineConfig({
   server: {
     open: true,
   },
+  base: "./",
   build: {
     lib: {
       entry: "src/app.js",
       formats: ["es"],
     },
+
     rollupOptions: {
       external: /^lit/,
       input: {
