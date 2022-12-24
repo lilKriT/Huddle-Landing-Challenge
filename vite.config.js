@@ -7,7 +7,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: "src/my-element.js",
+      entry: "src/app.js",
       formats: ["es"],
     },
     rollupOptions: {
