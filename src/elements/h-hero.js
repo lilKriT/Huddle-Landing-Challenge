@@ -58,7 +58,7 @@ export class HHero extends LitElement {
       }
 
       .wrapper {
-        max-width: var(--ww);
+        max-width: var(--width);
         outline: 1px solid blue;
         display: flex;
         flex-direction: row;
