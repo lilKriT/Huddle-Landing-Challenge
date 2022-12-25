@@ -14,10 +14,10 @@
     "dev": "vite",
     "build": "vite build"
   },
-  "dependencies": {
-    "lit": "^2.4.1"
-  },
   "devDependencies": {
     "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "lit": "^2.5.0"
   }
 }
