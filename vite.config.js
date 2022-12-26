@@ -14,7 +14,7 @@ export default defineConfig({
     },
 
     rollupOptions: {
-      external: /^lit/,
+      // external: /^lit/,
       input: {
         main: resolve(__dirname, "index.html"),
       },
