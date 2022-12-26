@@ -28,12 +28,15 @@ export class HHeader extends LitElement {
   static get styles() {
     return css`
       header {
-        background: yellow;
+        position: fixed;
+        width: 100%;
         display: flex;
         justify-content: center;
+        box-shadow: 0 5px 10px rgb(0 0 0 / 0.1);
       }
 
       nav {
+        margin-top: 46px;
         max-width: var(--width);
         width: 90%;
         display: flex;

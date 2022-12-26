@@ -47,7 +47,6 @@ export class HHero extends LitElement {
       }
 
       .hero {
-        outline: 1px solid blue;
         background: var(--heroBGimage) var(--veryPaleCyan);
         background-size: contain;
         background-repeat: no-repeat;
@@ -58,8 +57,8 @@ export class HHero extends LitElement {
       }
 
       .wrapper {
+        margin-top: 80px;
         max-width: var(--width);
-        outline: 1px solid blue;
         display: flex;
         flex-direction: row;
         align-items: center;
