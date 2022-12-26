@@ -19,8 +19,8 @@ export class HHeader extends LitElement {
   render() {
     return html`<header>
       <nav>
-        <img src="${logo}" />
-        <a href="#">Try It Free</a>
+        <a href="#"> <img src="${logo}" /></a>
+        <a href="#" class="navLink">Try It Free</a>
       </nav>
     </header> `;
   }
@@ -33,23 +33,29 @@ export class HHeader extends LitElement {
         display: flex;
         justify-content: center;
         box-shadow: 0 5px 10px rgb(0 0 0 / 0.1);
+        backdrop-filter: blur(3px);
       }
 
       nav {
-        margin-top: 46px;
+        margin: 2.875rem auto 1.375rem;
         max-width: var(--width);
         width: 90%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-family: "Open Sans", sans-serif;
       }
 
-      a {
+      .navLink {
         text-decoration: none;
         display: inline-block;
         background: white;
         padding: 12px 20px;
         border-radius: 100px;
+        color: var(--veryDarkCyan);
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        box-shadow: 0 0 15px rgb(0 0 0 / 0.2);
       }
     `;
   }
