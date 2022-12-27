@@ -64,6 +64,11 @@ export class HFooter extends LitElement {
         flex-direction: column;
         align-items: center;
       }
+
+      a {
+        text-decoration: none;
+        color: var(--veryPaleCyan);
+      }
     `;
   }
 }
