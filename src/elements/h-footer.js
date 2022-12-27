@@ -19,8 +19,8 @@ export class HFooter extends LitElement {
         <div className="wrapper">
           <img src="${logo}" />
 
-          <div className="content">
-            <div>
+          <div class="content">
+            <div class="footerColumn">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
 
@@ -28,19 +28,19 @@ export class HFooter extends LitElement {
               <a href="#">example@huddle.com</a>
             </div>
 
-            <div>
+            <div class="footerColumn">
               <a href="#">About Us</a>
               <a href="#">What We Do</a>
               <a href="#">FAQ</a>
             </div>
 
-            <div>
+            <div class="footerColumn">
               <a href="#">Career</a>
               <a href="#">Blog</a>
               <a href="#">Contact Us</a>
             </div>
 
-            <div>
+            <div class="footerColumn">
               <a href="#">+1-543-123-4567</a>
               <a href="#">+1-543-123-4567</a>
               <a href="#">+1-543-123-4567</a>
@@ -53,9 +53,15 @@ export class HFooter extends LitElement {
 
   static get styles() {
     return css`
+      * {
+        outline: 1px solid blue;
+      }
+
       footer {
         background-color: var(--veryDarkCyan);
         color: #fff;
+        display: flex;
+        justify-content: center;
       }
 
       .wrapper {
@@ -63,6 +69,12 @@ export class HFooter extends LitElement {
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+
+      .footerColumn {
+        display: flex;
+        flex-direction: column;
+        background: red;
       }
 
       a {
