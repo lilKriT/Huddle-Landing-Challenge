@@ -71,10 +71,14 @@ export class HFooter extends LitElement {
         align-items: center;
       }
 
+      .content {
+        display: flex;
+      }
+
       .footerColumn {
         display: flex;
         flex-direction: column;
-        background: red;
+        width: 25%;
       }
 
       a {
