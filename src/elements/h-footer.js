@@ -54,7 +54,7 @@ export class HFooter extends LitElement {
   static get styles() {
     return css`
       * {
-        outline: 1px solid blue;
+        outline: 1px solid orange;
       }
 
       footer {
@@ -73,17 +73,28 @@ export class HFooter extends LitElement {
 
       .content {
         display: flex;
+        justify-content: space-between;
+        gap: 12px;
       }
 
       .footerColumn {
         display: flex;
         flex-direction: column;
-        width: 25%;
+        align-items: flex-start;
+        flex-basis: 12%;
+        flex-grow: 1;
+        gap: 12px;
+      }
+
+      .footerColumn:first-of-type {
+        flex-grow: 4;
       }
 
       a {
         text-decoration: none;
         color: var(--veryPaleCyan);
+        background: red;
+        padding: 4px;
       }
     `;
   }
