@@ -16,8 +16,8 @@ export class HFooter extends LitElement {
   render() {
     return html`
       <footer>
-        <div className="wrapper">
-          <img src="${logo}" />
+        <div class="wrapper">
+          <img src="${logo}" class="logo" />
 
           <div class="content">
             <div class="footerColumn">
@@ -57,10 +57,6 @@ export class HFooter extends LitElement {
 
   static get styles() {
     return css`
-      * {
-        outline: 1px solid orange;
-      }
-
       footer {
         background-color: var(--veryDarkCyan);
         color: #fff;
@@ -73,6 +69,10 @@ export class HFooter extends LitElement {
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+
+      .logo {
+        align-self: start;
       }
 
       .content {
