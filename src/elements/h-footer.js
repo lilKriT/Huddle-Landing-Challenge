@@ -46,6 +46,10 @@ export class HFooter extends LitElement {
               <a href="#">+1-543-123-4567</a>
             </div>
           </div>
+
+          <p class="copyright">
+            &copy; Copyright 2018 <a href="#">Huddle</a>. All rights reserved.
+          </p>
         </div>
       </footer>
     `;
@@ -93,8 +97,12 @@ export class HFooter extends LitElement {
       a {
         text-decoration: none;
         color: var(--veryPaleCyan);
-        background: red;
-        padding: 4px;
+        padding: 2px;
+      }
+
+      .copyright {
+        font-size: 0.875rem;
+        align-self: end;
       }
     `;
   }
