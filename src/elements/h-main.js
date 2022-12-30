@@ -21,7 +21,14 @@ export class HMain extends LitElement {
   }
 
   static get styles() {
-    return css``;
+    return css`
+      .mainContent {
+        background: blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    `;
   }
 }
 

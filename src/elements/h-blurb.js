@@ -19,15 +19,25 @@ export class HBlurb extends LitElement {
   }
 
   render() {
-    return html`<div>
-      <h2>${this.heading}</h2>
-      <p>${this.para}</p>
+    return html`<div class="blurb">
+      <div class="blurbContent">
+        <h2>${this.heading}</h2>
+        <p>${this.para}</p>
+      </div>
       <img src="${this.img}" alt="${this.imgAlt}" />
     </div> `;
   }
 
   static get styles() {
-    return css``;
+    return css`
+      .blurb {
+        background: gray;
+      }
+
+      .bluarb {
+        display: flex;
+      }
+    `;
   }
 }
 
