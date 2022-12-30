@@ -3,17 +3,27 @@ import { LitElement, css, html } from "lit";
 export class HBlurb extends LitElement {
   static get properties() {
     return {
-      header: { type: String },
+      heading: { type: String },
+      para: { type: String },
+      img: { type: String },
+      imgAlt: { type: String },
     };
   }
 
   constructor() {
     super();
-    this.header = "Build The Community Your Fans Will Love";
+    this.heading = "This is heading";
+    this.para = "Lorem Ipsum";
+    this.img = "";
+    this.imgAlt = "Alternative Text";
   }
 
   render() {
-    return html`<div>blurb here</div> `;
+    return html`<div>
+      <h2>${this.heading}</h2>
+      <p>${this.para}</p>
+      <img src="${this.img}" alt="${this.imgAlt}" />
+    </div> `;
   }
 
   static get styles() {
