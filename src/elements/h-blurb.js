@@ -30,12 +30,23 @@ export class HBlurb extends LitElement {
 
   static get styles() {
     return css`
+      * {
+        outline: 0px solid red;
+      }
       .blurb {
-        background: gray;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 5px rgb(0 0 0 / 0.3);
+        border-radius: 12px;
+        padding: 0 0 0 100px;
       }
 
-      .bluarb {
-        display: flex;
+      .blurbContent {
+        width: 50%;
+      }
+
+      img {
+        width: 50%;
       }
     `;
   }

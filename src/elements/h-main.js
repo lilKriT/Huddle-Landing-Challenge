@@ -23,10 +23,10 @@ export class HMain extends LitElement {
   static get styles() {
     return css`
       .mainContent {
-        background: blue;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 8.875rem 0;
       }
     `;
   }
