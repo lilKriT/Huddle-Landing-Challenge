@@ -7,6 +7,7 @@ export class HBlurb extends LitElement {
       para: { type: String },
       img: { type: String },
       imgAlt: { type: String },
+      isOdd: { type: Boolean, reflect: true },
     };
   }
 
@@ -16,6 +17,7 @@ export class HBlurb extends LitElement {
     this.para = "Lorem Ipsum";
     this.img = "";
     this.imgAlt = "Alternative Text";
+    this.isOdd = true;
   }
 
   render() {
@@ -30,7 +32,7 @@ export class HBlurb extends LitElement {
 
   static get styles() {
     return css`
-      :host:nth-child(even) {
+      :host:nth-child(odd) {
         background: blue;
       }
 

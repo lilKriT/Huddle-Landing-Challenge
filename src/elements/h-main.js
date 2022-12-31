@@ -33,6 +33,10 @@ export class HMain extends LitElement {
         align-items: center;
         padding: 8.875rem 0;
       }
+
+      h-blurb {
+        background: red !important;
+      }
     `;
   }
 }
