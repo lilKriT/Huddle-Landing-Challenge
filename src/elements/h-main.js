@@ -22,6 +22,11 @@ export class HMain extends LitElement {
 
   static get styles() {
     return css`
+      :host {
+        outline: 1px solid red;
+        display: block;
+      }
+
       .mainContent {
         display: flex;
         flex-direction: column;

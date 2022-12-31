@@ -30,9 +30,10 @@ export class HBlurb extends LitElement {
 
   static get styles() {
     return css`
-      * {
-        outline: 0px solid red;
+      :host:nth-child(even) {
+        background: blue;
       }
+
       .blurb {
         display: flex;
         align-items: center;

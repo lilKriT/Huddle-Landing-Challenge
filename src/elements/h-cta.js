@@ -26,17 +26,19 @@ export class HCTA extends LitElement {
   static get styles() {
     return css`
       :host {
+        display: flex;
+        justify-content: center;
         width: 100%;
       }
 
       .cta {
         background: gray;
-        width: 60%;
         display: flex;
         flex-direction: column;
         align-items: center;
         box-shadow: 0 0 10px rgb(0 0 0 / 0.3);
         border-radius: 12px;
+        width: 60%;
       }
 
       a {
