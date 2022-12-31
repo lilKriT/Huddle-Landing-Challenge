@@ -17,7 +17,7 @@ export class HBlurb extends LitElement {
     this.para = "Lorem Ipsum";
     this.img = "";
     this.imgAlt = "Alternative Text";
-    this.isOdd = true;
+    this.isOdd = false;
   }
 
   render() {
@@ -25,6 +25,7 @@ export class HBlurb extends LitElement {
       <div class="blurbContent">
         <h2>${this.heading}</h2>
         <p>${this.para}</p>
+        ${this.isOdd ? "this is odd" : "not odd"}
       </div>
       <img src="${this.img}" alt="${this.imgAlt}" />
     </div> `;
