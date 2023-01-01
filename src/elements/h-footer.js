@@ -5,6 +5,10 @@ import pinImg from "/src/assets/images/icon-location.svg";
 import emailImg from "/src/assets/images/icon-email.svg";
 import phoneImg from "/src/assets/images/icon-phone.svg";
 
+import facebookIcon from "/src/assets/icons/facebook-f.svg";
+import twitterIcon from "/src/assets/icons/twitter.svg";
+import instagramIcon from "/src/assets/icons/instagram.svg";
+
 export class HFooter extends LitElement {
   static get properties() {
     return {
@@ -47,10 +51,16 @@ export class HFooter extends LitElement {
               <a href="#">Contact Us</a>
             </div>
 
-            <div class="footerColumn">
-              <a href="#">+1-543-123-4567</a>
-              <a href="#">+1-543-123-4567</a>
-              <a href="#">+1-543-123-4567</a>
+            <div class="footerColumn socialColumn">
+              <a href="#" class="socialIcon"
+                ><img src="${facebookIcon}" alt=""
+              /></a>
+              <a href="#" class="socialIcon"
+                ><img src="${twitterIcon}" alt=""
+              /></a>
+              <a href="#" class="socialIcon"
+                ><img src="${instagramIcon}" alt=""
+              /></a>
             </div>
           </div>
 
@@ -106,6 +116,21 @@ export class HFooter extends LitElement {
         text-decoration: none;
         color: var(--veryPaleCyan);
         padding: 2px;
+      }
+
+      .socialColumn {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .socialIcon {
+        display: flex;
+        justify-content: center;
+        width: 32px;
+        padding: 1px;
+        aspect-ratio: 1;
+        border: 1px solid white;
+        border-radius: 50%;
       }
 
       .copyright {
