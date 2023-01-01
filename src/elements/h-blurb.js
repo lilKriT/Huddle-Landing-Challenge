@@ -31,23 +31,21 @@ export class HBlurb extends LitElement {
         <p>${this.para}</p>
         ${this.isOdd ? "this is odd" : "not odd"}
       </div>
-      <img src="${this.img}" alt="${this.imgAlt}" />
+      <div class="blurbImage">
+        <img src="${this.img}" alt="${this.imgAlt}" />
+      </div>
     </div> `;
   }
 
   static get styles() {
     return css`
-      :host:nth-child(odd) {
-        background: blue;
-      }
-
       .blurb {
         display: flex;
         flex-direction: row;
         align-items: center;
         box-shadow: 0 0 5px rgb(0 0 0 / 0.3);
         border-radius: 12px;
-        padding: 0 0 0 100px;
+        margin-bottom: 3rem;
       }
 
       .odd {
@@ -56,10 +54,19 @@ export class HBlurb extends LitElement {
 
       .blurbContent {
         width: 50%;
+        padding-left: 100px;
       }
 
-      img {
+      .blurbImage {
         width: 50%;
+        object-fit: none;
+        padding-left: 100px;
+      }
+
+      .blurbImage img {
+        width: 100%;
+        object-fit: cover;
+        outline: 1px solid red;
       }
     `;
   }
