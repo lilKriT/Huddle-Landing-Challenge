@@ -1,5 +1,5 @@
 import { LitElement, css, html } from "lit";
-import logo from "/src/assets/images/logo.svg";
+import logoWhite from "/src/assets/images/logo-white.svg";
 
 export class HFooter extends LitElement {
   static get properties() {
@@ -17,7 +17,7 @@ export class HFooter extends LitElement {
     return html`
       <footer>
         <div class="wrapper">
-          <img src="${logo}" class="logo" />
+          <a href="#" class="logo"><img src="${logoWhite}" /></a>
 
           <div class="content">
             <div class="footerColumn">
@@ -62,6 +62,7 @@ export class HFooter extends LitElement {
         color: #fff;
         display: flex;
         justify-content: center;
+        padding: 150px 0 0;
       }
 
       .wrapper {

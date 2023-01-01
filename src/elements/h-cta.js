@@ -39,6 +39,7 @@ export class HCTA extends LitElement {
         box-shadow: 0 0 10px rgb(0 0 0 / 0.3);
         border-radius: 12px;
         width: 60%;
+        transform: translateY(200px);
       }
 
       a {
