@@ -1,5 +1,9 @@
 import { LitElement, css, html } from "lit";
+
 import logoWhite from "/src/assets/images/logo-white.svg";
+import pinImg from "/src/assets/images/icon-location.svg";
+import emailImg from "/src/assets/images/icon-email.svg";
+import phoneImg from "/src/assets/images/icon-phone.svg";
 
 export class HFooter extends LitElement {
   static get properties() {
@@ -21,11 +25,14 @@ export class HFooter extends LitElement {
 
           <div class="content">
             <div class="footerColumn">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua
+              <span>
+                <img src="${pinImg}" alt="" />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua
+              </span>
 
-              <a href="#">+1-543-123-4567</a>
-              <a href="#">example@huddle.com</a>
+              <a href="#"><img src="${phoneImg}" alt="" />+1-543-123-4567</a>
+              <a href="#"><img src="${emailImg}" alt="" />example@huddle.com</a>
             </div>
 
             <div class="footerColumn">
