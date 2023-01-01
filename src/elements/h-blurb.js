@@ -46,6 +46,8 @@ export class HBlurb extends LitElement {
         box-shadow: 0 0 5px rgb(0 0 0 / 0.3);
         border-radius: 12px;
         margin-bottom: 3rem;
+        padding: 2rem 1rem;
+        max-width: var(--width);
       }
 
       .odd {
@@ -66,7 +68,6 @@ export class HBlurb extends LitElement {
       .blurbImage img {
         width: 100%;
         object-fit: cover;
-        outline: 1px solid red;
       }
     `;
   }
