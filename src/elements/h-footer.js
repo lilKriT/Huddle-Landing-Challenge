@@ -85,6 +85,7 @@ export class HFooter extends LitElement {
       .wrapper {
         max-width: var(--width);
         display: flex;
+        gap: 2rem;
         flex-direction: column;
         align-items: center;
       }
@@ -106,6 +107,12 @@ export class HFooter extends LitElement {
         flex-basis: 12%;
         flex-grow: 1;
         gap: 12px;
+      }
+
+      .footerColumn:first-child > * {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
       }
 
       .footerColumn:first-of-type {

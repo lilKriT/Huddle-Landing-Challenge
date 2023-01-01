@@ -32,14 +32,15 @@ export class HCTA extends LitElement {
       }
 
       .cta {
-        background: gray;
+        background: white;
         display: flex;
         flex-direction: column;
         align-items: center;
         box-shadow: 0 0 10px rgb(0 0 0 / 0.3);
         border-radius: 12px;
-        width: 60%;
+        width: 50%;
         transform: translateY(200px);
+        padding: 3rem;
       }
 
       a {
@@ -47,6 +48,7 @@ export class HCTA extends LitElement {
         color: white;
         background: var(--pink);
         border-radius: 1000px;
+        padding: 1rem 6rem;
       }
     `;
   }
