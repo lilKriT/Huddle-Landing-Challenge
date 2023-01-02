@@ -130,7 +130,8 @@ export class HFooter extends LitElement {
         padding: 2px;
         position: relative;
       }
-      a:hover::after {
+
+      a::after {
         content: "";
         background: #fff;
         position: absolute;
@@ -138,6 +139,12 @@ export class HFooter extends LitElement {
         right: 0;
         bottom: 0;
         height: 2px;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+
+      a:hover::after {
+        transform: scaleX(1);
       }
 
       .socialColumn {
