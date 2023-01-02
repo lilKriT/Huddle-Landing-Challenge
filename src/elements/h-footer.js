@@ -35,20 +35,27 @@ export class HFooter extends LitElement {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua
               </span>
 
-              <a href="#"><img src="${phoneImg}" alt="" />+1-543-123-4567</a>
-              <a href="#"><img src="${emailImg}" alt="" />example@huddle.com</a>
+              <a href="#"
+                ><img src="${phoneImg}" alt="" /><span class="hoverUnderline"
+                  >+1-543-123-4567</span
+                ></a
+              >
+              <a href="#"
+                ><img src="${emailImg}" alt="" />
+                <span class="hoverUnderline">example@huddle.com</span></a
+              >
             </div>
 
             <div class="footerColumn">
-              <a href="#">About Us</a>
-              <a href="#">What We Do</a>
-              <a href="#">FAQ</a>
+              <a href="#" class="hoverUnderline">About Us</a>
+              <a href="#" class="hoverUnderline">What We Do</a>
+              <a href="#" class="hoverUnderline">FAQ</a>
             </div>
 
             <div class="footerColumn">
-              <a href="#">Career</a>
-              <a href="#">Blog</a>
-              <a href="#">Contact Us</a>
+              <a href="#" class="hoverUnderline">Career</a>
+              <a href="#" class="hoverUnderline">Blog</a>
+              <a href="#" class="hoverUnderline">Contact Us</a>
             </div>
 
             <div class="footerColumn socialColumn">
@@ -65,7 +72,8 @@ export class HFooter extends LitElement {
           </div>
 
           <p class="copyright">
-            &copy; Copyright 2018 <a href="#">Huddle</a>. All rights reserved.
+            &copy; Copyright 2018 <a href="#" class="hoverUnderline">Huddle</a>.
+            All rights reserved.
           </p>
         </div>
       </footer>
@@ -128,22 +136,25 @@ export class HFooter extends LitElement {
         text-decoration: none;
         color: var(--veryPaleCyan);
         padding: 2px;
+      }
+
+      .hoverUnderline {
         position: relative;
       }
 
-      a::after {
+      .hoverUnderline::after {
         content: "";
         background: #fff;
         position: absolute;
         left: 0;
         right: 0;
         bottom: 0;
-        height: 2px;
+        height: 0.125rem;
         transform: scaleX(0);
         transition: all 0.3s ease-in-out;
       }
 
-      a:hover::after {
+      .hoverUnderline:hover::after {
         transform: scaleX(1);
       }
 
