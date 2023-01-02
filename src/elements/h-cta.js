@@ -49,6 +49,11 @@ export class HCTA extends LitElement {
         background: var(--pink);
         border-radius: 1000px;
         padding: 1rem 6rem;
+        transition: all 0.3s ease-in-out;
+      }
+
+      a:hover {
+        background: var(--pinkPale);
       }
     `;
   }
