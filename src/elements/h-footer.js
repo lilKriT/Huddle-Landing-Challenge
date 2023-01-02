@@ -92,6 +92,11 @@ export class HFooter extends LitElement {
 
       .logo {
         align-self: start;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .logo:hover {
+        transform: scale(1.05);
       }
 
       .content {
@@ -123,6 +128,16 @@ export class HFooter extends LitElement {
         text-decoration: none;
         color: var(--veryPaleCyan);
         padding: 2px;
+        position: relative;
+      }
+      a:hover::after {
+        content: "";
+        background: #fff;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
       }
 
       .socialColumn {

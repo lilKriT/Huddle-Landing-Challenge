@@ -29,7 +29,6 @@ export class HBlurb extends LitElement {
       <div class="blurbContent">
         <h2>${this.heading}</h2>
         <p>${this.para}</p>
-        ${this.isOdd ? "this is odd" : "not odd"}
       </div>
       <div class="blurbImage">
         <img src="${this.img}" alt="${this.imgAlt}" />

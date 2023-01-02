@@ -54,6 +54,7 @@ export class HHero extends LitElement {
         display: flex;
         justify-content: center;
         padding: 6rem 0;
+        box-shadow: 0 5px 15px rgb(0 0 0 / 0.3);
       }
 
       .wrapper {
