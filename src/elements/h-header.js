@@ -1,7 +1,4 @@
 import { LitElement, css, html } from "lit";
-// import { LitElement, css, html } from "/node_modules/.vite/deps/lit";
-// import { LitElement, css, html } from "https://unpkg.com/lit?module";
-// import { LitElement, css, html } from "../../node_modules/.vite/deps/lit";
 import logo from "/src/assets/images/logo.svg";
 
 export class HHeader extends LitElement {
@@ -19,7 +16,7 @@ export class HHeader extends LitElement {
   render() {
     return html`<header>
       <nav>
-        <a href="#"> <img src="${logo}" /></a>
+        <a href="#" class="logo"> <img src="${logo}" /></a>
         <a href="#" class="navLink">Try It Free</a>
       </nav>
     </header> `;
@@ -46,6 +43,14 @@ export class HHeader extends LitElement {
         font-family: "Open Sans", sans-serif;
       }
 
+      .logo {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .logo:hover {
+        transform: scale(1.05);
+      }
+
       .navLink {
         text-decoration: none;
         display: inline-block;
@@ -56,6 +61,12 @@ export class HHeader extends LitElement {
         font-family: "Open Sans", sans-serif;
         font-weight: 700;
         box-shadow: 0 0 15px rgb(0 0 0 / 0.2);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .navLink:hover {
+        color: var(--grayishBlue);
+        box-shadow: 0 0 15px rgb(0 0 0 / 0.4);
       }
     `;
   }
