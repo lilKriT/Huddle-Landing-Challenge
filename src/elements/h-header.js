@@ -5,17 +5,19 @@ export class HHeader extends LitElement {
   static get properties() {
     return {
       text: { type: String },
+      shrunk: { type: Boolean },
     };
   }
 
   constructor() {
     super();
     this.text = "Header goes here";
+    this.shrunk = false;
   }
 
   render() {
     return html`<header>
-      <nav>
+      <nav class="shrinkOnScroll">
         <a href="#" class="logo"> <img src="${logo}" /></a>
         <a href="#" class="navLink">Try It Free</a>
       </nav>
@@ -41,6 +43,10 @@ export class HHeader extends LitElement {
         justify-content: space-between;
         align-items: center;
         font-family: "Open Sans", sans-serif;
+      }
+
+      .shrunk {
+        margin: 0.875rem auto 0.375rem;
       }
 
       .logo {
