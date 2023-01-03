@@ -47,6 +47,11 @@ export class HBlurb extends LitElement {
         margin-bottom: 3rem;
         padding: 2rem 1rem;
         max-width: var(--width);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .blurb:hover {
+        box-shadow: 0 0 15px rgb(0 0 0 / 0.3);
       }
 
       .odd {

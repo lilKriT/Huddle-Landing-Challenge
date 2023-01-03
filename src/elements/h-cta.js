@@ -36,11 +36,16 @@ export class HCTA extends LitElement {
         display: flex;
         flex-direction: column;
         align-items: center;
-        box-shadow: 0 0 10px rgb(0 0 0 / 0.3);
+        box-shadow: 0 0 5px rgb(0 0 0 / 0.3);
         border-radius: 12px;
         width: 50%;
         transform: translateY(200px);
         padding: 3rem;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .cta:hover {
+        box-shadow: 0 0 15px rgb(0 0 0 / 0.3);
       }
 
       a {

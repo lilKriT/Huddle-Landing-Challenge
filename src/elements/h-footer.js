@@ -27,8 +27,10 @@ export class HFooter extends LitElement {
             <div class="footerColumn">
               <span>
                 <img src="${pinImg}" alt="" />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </p>
               </span>
 
               <a href="#"
@@ -134,6 +136,11 @@ export class HFooter extends LitElement {
         display: flex;
         gap: 16px;
         align-items: flex-start;
+      }
+
+      .footerColumn:first-child > * > img {
+        flex-basis: 100px;
+        display: block;
       }
 
       .footerColumn:first-of-type {
