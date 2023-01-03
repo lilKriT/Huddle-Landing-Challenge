@@ -1,4 +1,6 @@
 import { LitElement, css, html } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+
 import logo from "/src/assets/images/logo.svg";
 
 export class HHeader extends LitElement {
@@ -6,6 +8,7 @@ export class HHeader extends LitElement {
     return {
       text: { type: String },
       shrunk: { type: Boolean },
+      classes: {},
     };
   }
 
@@ -13,11 +16,13 @@ export class HHeader extends LitElement {
     super();
     this.text = "Header goes here";
     this.shrunk = false;
+    this.classes = { shrinkOnScroll: true, shrunk: false };
   }
 
   render() {
+    this.classes = { shrinkOnScroll: true, shrunk: false };
     return html`<header>
-      <nav class="shrinkOnScroll">
+      <nav class=${classMap(this.classes)}>
         <a href="#" class="logo"> <img src="${logo}" /></a>
         <a href="#" class="navLink">Try It Free</a>
       </nav>
@@ -36,7 +41,6 @@ export class HHeader extends LitElement {
       }
 
       nav {
-        margin: 2.875rem auto 1.375rem;
         max-width: var(--width);
         width: 90%;
         display: flex;
@@ -45,8 +49,13 @@ export class HHeader extends LitElement {
         font-family: "Open Sans", sans-serif;
       }
 
+      .shrinkOnScroll {
+        margin: 2.875rem auto 1.375rem;
+      }
+
       .shrunk {
         margin: 0.875rem auto 0.375rem;
+        background: red;
       }
 
       .logo {
