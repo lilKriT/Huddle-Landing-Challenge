@@ -20,6 +20,12 @@ export class HHeader extends LitElement {
   }
 
   render() {
+    // const elements = document.querySelectorAll("*");
+    // const elements = this.shadowRoot.querySelector("*");
+
+    // console.log(elements.length);
+    // console.log(elements);
+
     this.classes = { shrinkOnScroll: true, shrunk: false };
     return html`<header>
       <nav class=${classMap(this.classes)}>
