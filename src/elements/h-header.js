@@ -1,5 +1,6 @@
 import { LitElement, css, html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import { run, go } from "../feature2";
 
 import logo from "/src/assets/images/logo.svg";
 
@@ -26,6 +27,10 @@ export class HHeader extends LitElement {
     // console.log(elements.length);
     // console.log(elements);
 
+    let root = this.shadowRoot;
+    // console.log(root);
+    // go();
+
     this.classes = { shrinkOnScroll: true, shrunk: false };
     return html`<header>
       <nav class=${classMap(this.classes)}>
@@ -33,6 +38,14 @@ export class HHeader extends LitElement {
         <a href="#" class="navLink">Try It Free</a>
       </nav>
     </header> `;
+  }
+
+  firstUpdated() {
+    console.log("Updated");
+    // go(this.renderRoot);
+    run();
+    // let test = this.renderRoot.querySelectorAll(".shrinkOnScroll");
+    // console.log(test);
   }
 
   static get styles() {
