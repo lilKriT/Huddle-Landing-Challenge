@@ -40,12 +40,16 @@ export class HHeader extends LitElement {
     </header> `;
   }
 
-  firstUpdated() {
-    console.log("Updated");
-    // go(this.renderRoot);
-    run();
-    // let test = this.renderRoot.querySelectorAll(".shrinkOnScroll");
-    // console.log(test);
+  connectedCallback() {
+    super.connectedCallback();
+
+    console.log("connected");
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+
+    console.log("disconnected");
   }
 
   static get styles() {
