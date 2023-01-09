@@ -61,6 +61,7 @@ export class HHeader extends LitElement {
         justify-content: center;
         box-shadow: 0 5px 10px rgb(0 0 0 / 0.1);
         backdrop-filter: blur(3px);
+        z-index: 10;
       }
 
       nav {
