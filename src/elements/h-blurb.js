@@ -31,7 +31,7 @@ export class HBlurb extends LitElement {
         <p>${this.para}</p>
       </div>
       <div class="blurbImage">
-        <img src="${this.img}" alt="${this.imgAlt}" />
+        <slot name="image"></slot>
       </div>
     </div> `;
   }
@@ -69,7 +69,7 @@ export class HBlurb extends LitElement {
         padding-left: 100px;
       }
 
-      .blurbImage img {
+      .blurbImage ::slotted(img) {
         width: 100%;
         object-fit: cover;
       }
