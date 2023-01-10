@@ -21,8 +21,6 @@ export class HHeader extends LitElement {
   }
 
   render() {
-    let root = this.shadowRoot;
-
     this.classes = { shrinkOnScroll: true, shrunk: false };
     return html`<header>
       <nav class=${classMap(this.classes)}>
@@ -35,8 +33,9 @@ export class HHeader extends LitElement {
   connectedCallback() {
     super.connectedCallback();
 
+    let root = this.shadowRoot;
     console.log("connected");
-    shrinker.subscribe();
+    shrinker.subscribe(this);
   }
 
   disconnectedCallback() {
