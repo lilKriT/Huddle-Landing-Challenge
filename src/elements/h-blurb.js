@@ -17,8 +17,6 @@ export class HBlurb extends LitElement {
     super();
     this.heading = "This is heading";
     this.para = "Lorem Ipsum";
-    this.img = "";
-    this.imgAlt = "Alternative Text";
     this.isOdd = false;
     this.classes = { blurb: true, odd: true };
   }

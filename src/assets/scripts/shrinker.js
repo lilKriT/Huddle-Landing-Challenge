@@ -1,11 +1,19 @@
+let subscribers = [];
+
 class Shrinker {
   constructor() {
-    this.subscribers = [];
     console.log("Created shrinker");
-    document.addEventListener("scroll", () => {
-      let fromTop = Math.round(window.scrollY);
-      console.log(`Scrolled: ${fromTop}`);
-    });
+    document.addEventListener("scroll", this.onScroll);
+  }
+
+  onScroll() {
+    let fromTop = Math.round(window.scrollY);
+
+    if (fromTop > 200) {
+      subscribers.forEach((s) => {
+        // console.log(s);
+      });
+    }
   }
 
   init() {
@@ -13,8 +21,8 @@ class Shrinker {
   }
 
   subscribe(s) {
-    this.subscribers.push(s);
-    console.log(this.subscribers);
+    subscribers.push(s);
+    console.log(subscribers);
   }
 
   unsubscribe() {
