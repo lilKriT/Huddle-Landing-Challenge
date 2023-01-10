@@ -1,5 +1,6 @@
 import { LitElement, css, html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
+import shrinker from "../assets/scripts/shrinker";
 
 export class HBlurb extends LitElement {
   static get properties() {
@@ -32,6 +33,11 @@ export class HBlurb extends LitElement {
         <slot name="image"></slot>
       </div>
     </div> `;
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    shrinker.subscribe(this);
   }
 
   static get styles() {
