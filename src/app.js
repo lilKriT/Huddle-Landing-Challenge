@@ -6,5 +6,4 @@ import { HCTA } from "./elements/h-cta";
 import { HFooter } from "./elements/h-footer";
 
 // Features
-import Shrinker from "./assets/scripts/shrinker.js";
-export const shrinker = new Shrinker();
+import shrinker from "./assets/scripts/shrinker";

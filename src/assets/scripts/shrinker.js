@@ -30,4 +30,6 @@ class Shrinker {
   }
 }
 
-export default Shrinker;
+const shrinker = new Shrinker();
+
+export default shrinker;
