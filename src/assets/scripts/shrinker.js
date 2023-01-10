@@ -11,7 +11,13 @@ class Shrinker {
 
     if (fromTop > 200) {
       subscribers.forEach((s) => {
-        console.log(s);
+        // console.log("yes");
+        s.classList.add("testing");
+      });
+    } else {
+      subscribers.forEach((s) => {
+        // console.log("nope");
+        s.classList.remove("testing");
       });
     }
   }
