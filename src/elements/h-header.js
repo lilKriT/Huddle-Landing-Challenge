@@ -1,6 +1,6 @@
 import { LitElement, css, html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-import { run, go } from "../feature2";
+import { shrinker } from "../app";
 
 import logo from "/src/assets/images/logo.svg";
 
@@ -21,15 +21,7 @@ export class HHeader extends LitElement {
   }
 
   render() {
-    // const elements = document.querySelectorAll("*");
-    // const elements = this.shadowRoot.querySelector("*");
-
-    // console.log(elements.length);
-    // console.log(elements);
-
     let root = this.shadowRoot;
-    // console.log(root);
-    // go();
 
     this.classes = { shrinkOnScroll: true, shrunk: false };
     return html`<header>
@@ -44,6 +36,7 @@ export class HHeader extends LitElement {
     super.connectedCallback();
 
     console.log("connected");
+    shrinker.subscribe();
   }
 
   disconnectedCallback() {
