@@ -34,15 +34,13 @@ export class HHeader extends LitElement {
   connectedCallback() {
     super.connectedCallback();
 
-    let root = this.shadowRoot;
-    console.log("connected");
     shrinker.subscribe(this);
+
+    addEventListener("scrolledShrink", () => console.log("Fire!"));
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-
-    console.log("disconnected");
   }
 
   static get styles() {
