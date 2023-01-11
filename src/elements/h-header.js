@@ -32,13 +32,24 @@ export class HHeader extends LitElement {
   connectedCallback() {
     super.connectedCallback();
 
-    addEventListener("scrolledShrink", (e) =>
-      console.log(`Pixels: ${e.detail.pixels}`)
-    );
+    addEventListener("scrolledShrink", (this.shrinkRef = (e) => this.shrink()));
+    addEventListener("scrolledGrow", (this.growRef = (e) => this.grow()));
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
+    removeEventListener("scrolledShrink", this.shrinkRef);
+    removeEventListener("scrolledGrow", this.growRef);
+  }
+
+  shrink() {
+    console.log(`Shrinking`);
+    this.shadowRoot.querySelector("header").classList.add("shrunk");
+  }
+
+  grow() {
+    console.log(`Growing`);
+    this.shadowRoot.querySelector("header").classList.remove("shrunk");
   }
 
   static get styles() {
@@ -64,11 +75,11 @@ export class HHeader extends LitElement {
 
       .shrinkOnScroll {
         margin: 2.875rem auto 1.375rem;
+        transition: all 0.3s ease;
       }
 
-      .shrunk {
-        margin: 0.875rem auto 0.375rem;
-        background: red;
+      .shrunk .shrinkOnScroll {
+        margin: 0.625rem auto 0.625rem;
       }
 
       .logo {
