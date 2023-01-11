@@ -1,7 +1,5 @@
 import { LitElement, css, html } from "lit";
 import { classMap } from "lit/directives/class-map.js";
-// import { shrinker } from "../app";
-import shrinker from "../assets/scripts/shrinker";
 
 import logo from "/src/assets/images/logo.svg";
 
@@ -34,9 +32,9 @@ export class HHeader extends LitElement {
   connectedCallback() {
     super.connectedCallback();
 
-    shrinker.subscribe(this);
-
-    addEventListener("scrolledShrink", () => console.log("Fire!"));
+    addEventListener("scrolledShrink", (e) =>
+      console.log(`Pixels: ${e.detail.pixels}`)
+    );
   }
 
   disconnectedCallback() {

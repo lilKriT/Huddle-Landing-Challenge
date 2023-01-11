@@ -1,36 +1,30 @@
-const subscribers = [];
-
 class Shrinker {
   constructor() {
-    console.log("Created shrinker");
-    addEventListener("scroll", this.onScroll);
-
-    const scrolledGrow = new CustomEvent("scrolledGrow", {
-      detail: {
-        name: "cat",
-      },
-    });
+    this.scrollThreshold = 200;
+    addEventListener("scroll", () => this.onScroll());
   }
 
   onScroll() {
     let fromTop = Math.round(window.scrollY);
 
-    if (fromTop > 200) {
-      subscribers.forEach((s) => {
-        // console.log("yes");
-        const scrolledShrink = new CustomEvent("scrolledShrink", {
-          detail: {
-            name: "cat",
-            bubbles: true,
-          },
-        });
+    if (fromTop > this.scrollThreshold) {
+      const scrolledShrink = new CustomEvent("scrolledShrink", {
+        detail: {
+          pixels: fromTop,
+        },
+        bubbles: true,
+      });
 
-        dispatchEvent(scrolledShrink);
-      });
+      dispatchEvent(scrolledShrink);
     } else {
-      subscribers.forEach((s) => {
-        // console.log("nope");
+      const scrolledGrow = new CustomEvent("scrolledGrow", {
+        detail: {
+          pixels: fromTop,
+        },
+        bubbles: true,
       });
+
+      dispatchEvent(scrolledGrow);
     }
   }
 
