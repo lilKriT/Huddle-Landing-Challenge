@@ -11,7 +11,6 @@ class Shrinker {
 
   onScroll() {
     let fromTop = Math.round(window.scrollY);
-    console.count("Scrolling");
 
     if (fromTop > this.scrollThreshold) {
       const scrolledShrink = new CustomEvent("scrolledShrink", {
@@ -32,16 +31,6 @@ class Shrinker {
 
       dispatchEvent(scrolledGrow);
     }
-  }
-
-  subscribe(s) {
-    subscribers.push(s);
-    // console.log(subscribers);
-  }
-
-  unsubscribe(s) {
-    console.log("Unsubbed :(");
-    const newSubscribers = subscribers.filter((el) => el != s);
   }
 }
 
