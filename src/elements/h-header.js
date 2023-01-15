@@ -59,9 +59,13 @@ export class HHeader extends LitElement {
         width: 100%;
         display: flex;
         justify-content: center;
-        box-shadow: 0 5px 10px rgb(0 0 0 / 0.1);
-        backdrop-filter: blur(3px);
         z-index: 10;
+      }
+
+      header.shrunk {
+        backdrop-filter: blur(5px);
+        box-shadow: 0 5px 10px rgb(0 0 0 / 0.1);
+        background: rgb(255 255 255 / 0.3);
       }
 
       nav {
