@@ -1,11 +1,17 @@
+import { throttle } from "lodash";
+
 class Shrinker {
   constructor() {
     this.scrollThreshold = 200;
-    addEventListener("scroll", () => this.onScroll());
+    addEventListener(
+      "scroll",
+      throttle(() => this.onScroll(), 100)
+    );
   }
 
   onScroll() {
     let fromTop = Math.round(window.scrollY);
+    console.count("Scrolling");
 
     if (fromTop > this.scrollThreshold) {
       const scrolledShrink = new CustomEvent("scrolledShrink", {
@@ -26,10 +32,6 @@ class Shrinker {
 
       dispatchEvent(scrolledGrow);
     }
-  }
-
-  init() {
-    console.log("Shrinker Initialized");
   }
 
   subscribe(s) {

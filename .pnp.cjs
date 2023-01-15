@@ -29,6 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["lit", "npm:2.5.0"],\
+            ["lodash", "npm:4.17.21"],\
             ["vite", "virtual:a9db5a76d821d448cf56d2ed38913721facf8554ef9c41b1f4ab505b6adb18ceff31770aedc16f26578dd248da1094772bda4a6d2e808f5033eb87d5ed0fc9c1#npm:4.0.2"]\
           ],\
           "linkType": "SOFT"\
@@ -718,6 +719,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["huddle-landing-page", "workspace:."],\
             ["lit", "npm:2.5.0"],\
+            ["lodash", "npm:4.17.21"],\
             ["vite", "virtual:a9db5a76d821d448cf56d2ed38913721facf8554ef9c41b1f4ab505b6adb18ceff31770aedc16f26578dd248da1094772bda4a6d2e808f5033eb87d5ed0fc9c1#npm:4.0.2"]\
           ],\
           "linkType": "SOFT"\
@@ -865,6 +867,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["lit-html", "npm:2.5.0"],\
             ["@types/trusted-types", "npm:2.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lodash", [\
+        ["npm:4.17.21", {\
+          "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/",\
+          "packageDependencies": [\
+            ["lodash", "npm:4.17.21"]\
           ],\
           "linkType": "HARD"\
         }]\
