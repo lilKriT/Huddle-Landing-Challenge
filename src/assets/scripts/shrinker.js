@@ -2,7 +2,7 @@ import { throttle } from "lodash";
 
 class Shrinker {
   constructor() {
-    this.scrollThreshold = 200;
+    this.scrollThreshold = 100;
     addEventListener(
       "scroll",
       throttle(() => this.onScroll(), 100)

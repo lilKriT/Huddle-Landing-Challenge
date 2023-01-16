@@ -48,6 +48,10 @@ export class HCTA extends LitElement {
         box-shadow: 0 0 15px rgb(0 0 0 / 0.3);
       }
 
+      h2 {
+        font-size: 2rem;
+      }
+
       a {
         text-decoration: none;
         color: white;

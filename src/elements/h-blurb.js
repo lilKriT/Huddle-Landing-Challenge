@@ -114,6 +114,14 @@ export class HBlurb extends LitElement {
         padding-left: 100px;
       }
 
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        color: var(--grayishBlue);
+      }
+
       .blurbImage {
         width: 50%;
         object-fit: none;
