@@ -25,20 +25,20 @@ export class HFooter extends LitElement {
 
           <div class="content">
             <div class="footerColumn">
-              <span>
+              <div class="iconLink">
                 <img src="${pinImg}" alt="" />
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua
                 </p>
-              </span>
+              </div>
 
-              <a href="#"
+              <a href="#" class="iconLink"
                 ><img src="${phoneImg}" alt="" /><span class="hoverUnderline"
                   >+1-543-123-4567</span
                 ></a
               >
-              <a href="#"
+              <a href="#" class="iconLink"
                 ><img src="${emailImg}" alt="" />
                 <span class="hoverUnderline">example@huddle.com</span></a
               >
@@ -97,7 +97,7 @@ export class HFooter extends LitElement {
         color: #fff;
         display: flex;
         justify-content: center;
-        padding: 150px 0 0;
+        padding: 150px 0 40px;
       }
 
       .wrapper {
@@ -132,15 +132,13 @@ export class HFooter extends LitElement {
         gap: 12px;
       }
 
-      .footerColumn:first-child > * {
+      .iconLink {
         display: flex;
-        gap: 16px;
         align-items: flex-start;
       }
 
-      .footerColumn:first-child > * > img {
-        flex-basis: 100px;
-        display: block;
+      .iconLink img {
+        margin: 10px;
       }
 
       .footerColumn:first-of-type {
@@ -205,7 +203,7 @@ export class HFooter extends LitElement {
       }
 
       .copyright {
-        font-size: 0.875rem;
+        font-size: 14px;
         align-self: end;
       }
     `;

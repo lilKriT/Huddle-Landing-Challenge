@@ -43,12 +43,10 @@ export class HHeader extends LitElement {
   }
 
   shrink() {
-    console.log(`Shrinking`);
     this.shadowRoot.querySelector("header").classList.add("shrunk");
   }
 
   grow() {
-    console.log(`Growing`);
     this.shadowRoot.querySelector("header").classList.remove("shrunk");
   }
 
