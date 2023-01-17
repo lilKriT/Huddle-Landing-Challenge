@@ -86,6 +86,11 @@ export class HHeader extends LitElement {
 
       .logo {
         transition: all 0.3s ease-in-out;
+        width: clamp(10rem, 20%, 15rem);
+      }
+
+      .logo img {
+        width: 100%;
       }
 
       .logo:hover {
