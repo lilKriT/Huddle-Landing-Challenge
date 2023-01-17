@@ -103,6 +103,22 @@ export class HHero extends LitElement {
       img {
         width: 50%;
       }
+
+      @media screen and (max-width: 768px) {
+        .wrapper {
+          flex-direction: column;
+        }
+
+        .content {
+          width: 80%;
+          padding-right: 0rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.625rem;
+          text-align: center;
+        }
+      }
     `;
   }
 }
