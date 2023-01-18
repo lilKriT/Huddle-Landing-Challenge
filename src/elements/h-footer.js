@@ -223,6 +223,20 @@ export class HFooter extends LitElement {
         font-size: 14px;
         align-self: end;
       }
+
+      @media screen and (max-width: 768px) {
+        .wrapper {
+          padding: 10px;
+        }
+
+        .content {
+          flex-direction: column;
+        }
+
+        .footerColumn:last-of-type {
+          justify-content: center;
+        }
+      }
     `;
   }
 }
