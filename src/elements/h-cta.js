@@ -38,7 +38,8 @@ export class HCTA extends LitElement {
         align-items: center;
         box-shadow: 0 0 5px rgb(0 0 0 / 0.3);
         border-radius: 12px;
-        width: 50%;
+        width: 90%;
+        max-width: 600px;
         transform: translateY(200px);
         padding: 3rem;
         transition: all 0.3s ease-in-out;
