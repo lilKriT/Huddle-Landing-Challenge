@@ -26,7 +26,7 @@ export class HFooter extends LitElement {
           <div class="content">
             <div class="footerColumn">
               <div class="iconLink">
-                <img src="${pinImg}" alt="" />
+                <div><img src="${pinImg}" alt="" /></div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -134,17 +134,16 @@ export class HFooter extends LitElement {
 
       .iconLink {
         display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         align-items: flex-start;
         outline: 1px red solid;
       }
 
-      .iconLink img {
-        display: block;
+      .iconLink div {
         height: 20px;
         width: 20px;
         margin: 5px;
-        flex: 0 0 30px;
-        object-fit: contain;
         transition: all 0.3s ease-in-out;
       }
 
