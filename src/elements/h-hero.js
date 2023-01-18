@@ -105,8 +105,13 @@ export class HHero extends LitElement {
       }
 
       @media screen and (max-width: 768px) {
+        .hero {
+          padding: 6rem 0 4rem;
+        }
+
         .wrapper {
           flex-direction: column;
+          gap: 3.75rem;
         }
 
         .content {
