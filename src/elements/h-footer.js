@@ -34,11 +34,11 @@ export class HFooter extends LitElement {
               </div>
 
               <a href="#" class="iconLink"
-                ><img src="${phoneImg}" alt="" />
+                ><div><img src="${phoneImg}" alt="" /></div>
                 <p class="hoverUnderline">+1-543-123-4567</p></a
               >
               <a href="#" class="iconLink"
-                ><img src="${emailImg}" alt="" />
+                ><div><img src="${emailImg}" alt="" /></div>
                 <p class="hoverUnderline">example@huddle.com</p></a
               >
             </div>
@@ -135,16 +135,23 @@ export class HFooter extends LitElement {
       .iconLink {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
         align-items: flex-start;
         outline: 1px red solid;
       }
 
       .iconLink div {
-        height: 20px;
-        width: 20px;
-        margin: 5px;
+        background: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1;
         transition: all 0.3s ease-in-out;
+        flex-basis: 30px;
+        flex-shrink: 0;
+      }
+
+      .iconLink img {
+        display: none;
       }
 
       .iconLink:hover img {
@@ -154,6 +161,7 @@ export class HFooter extends LitElement {
       .iconLink p {
         margin: 0;
         margin-top: 3px;
+        display: flex;
       }
 
       .footerColumn:first-of-type {
