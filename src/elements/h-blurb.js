@@ -24,7 +24,7 @@ export class HBlurb extends LitElement {
   firstUpdated() {
     const faders = this.shadowRoot.querySelectorAll(".fadein");
     const appearOptions = {
-      threshold: 1,
+      threshold: 0.8,
       rootMargin: "0px 0px 100px 0px",
     };
 
@@ -74,6 +74,10 @@ export class HBlurb extends LitElement {
         align-items: center;
       }
 
+      * {
+        box-sizing: border-box;
+      }
+
       .blurb {
         display: flex;
         flex-direction: row;
@@ -87,26 +91,26 @@ export class HBlurb extends LitElement {
         transition: all 0.3s ease-in-out;
       }
 
-      // .slidein {
-      //   transform: translateX(10%);
-      // }
+      .slidein {
+        transform: translateX(10%);
+      }
 
-      // .slidein.odd {
-      //   transform: translateX(-10%);
-      // }
+      .slidein.odd {
+        transform: translateX(-10%);
+      }
 
-      // .slidein.appear {
-      //   transform: translateX(0);
-      // }
+      .slidein.appear {
+        transform: translateX(0);
+      }
 
-      // .fadein {
-      //   opacity: 0;
-      //   transition: opacity 0.3s ease-in transform 0.3s ease-in;
-      // }
+      .fadein {
+        opacity: 0;
+        transition: opacity 0.3s ease-in transform 0.3s ease-in;
+      }
 
-      // .fadein.appear {
-      //   opacity: 1;
-      // }
+      .fadein.appear {
+        opacity: 1;
+      }
 
       .blurb:hover {
         box-shadow: 0 0 15px rgb(0 0 0 / 0.3);
@@ -143,6 +147,19 @@ export class HBlurb extends LitElement {
       @media screen and (max-width: 768px) {
         .blurb {
           flex-direction: column;
+          padding: 2rem;
+        }
+
+        .blurbContent {
+          width: 100%;
+          padding: 0;
+          text-align: center;
+          object-fit: contain;
+        }
+
+        .blurbImage {
+          width: 100%;
+          padding: 0;
         }
       }
     `;
