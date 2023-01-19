@@ -68,6 +68,12 @@ export class HBlurb extends LitElement {
 
   static get styles() {
     return css`
+      :host {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .blurb {
         display: flex;
         flex-direction: row;
@@ -76,30 +82,31 @@ export class HBlurb extends LitElement {
         border-radius: 12px;
         margin-bottom: 3rem;
         padding: 2rem 1rem;
+        width: 90%;
         max-width: var(--width);
         transition: all 0.3s ease-in-out;
       }
 
-      .slidein {
-        transform: translateX(10%);
-      }
+      // .slidein {
+      //   transform: translateX(10%);
+      // }
 
-      .slidein.odd {
-        transform: translateX(-10%);
-      }
+      // .slidein.odd {
+      //   transform: translateX(-10%);
+      // }
 
-      .slidein.appear {
-        transform: translateX(0);
-      }
+      // .slidein.appear {
+      //   transform: translateX(0);
+      // }
 
-      .fadein {
-        opacity: 0;
-        transition: opacity 0.3s ease-in transform 0.3s ease-in;
-      }
+      // .fadein {
+      //   opacity: 0;
+      //   transition: opacity 0.3s ease-in transform 0.3s ease-in;
+      // }
 
-      .fadein.appear {
-        opacity: 1;
-      }
+      // .fadein.appear {
+      //   opacity: 1;
+      // }
 
       .blurb:hover {
         box-shadow: 0 0 15px rgb(0 0 0 / 0.3);
@@ -131,6 +138,12 @@ export class HBlurb extends LitElement {
       .blurbImage ::slotted(img) {
         width: 100%;
         object-fit: cover;
+      }
+
+      @media screen and (max-width: 768px) {
+        .blurb {
+          flex-direction: column;
+        }
       }
     `;
   }
