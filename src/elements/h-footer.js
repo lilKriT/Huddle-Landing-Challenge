@@ -26,7 +26,9 @@ export class HFooter extends LitElement {
           <div class="content">
             <div class="footerColumn">
               <div class="iconLink">
-                <div><img src="${pinImg}" alt="" /></div>
+                <div>
+                  <img src="${pinImg}" alt="" /><img src="${pinImg}" alt="" />
+                </div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -91,6 +93,12 @@ export class HFooter extends LitElement {
 
   static get styles() {
     return css`
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: box-content;
+      }
+
       footer {
         background-color: var(--veryDarkCyan);
         color: #fff;
@@ -140,18 +148,14 @@ export class HFooter extends LitElement {
       }
 
       .iconLink div {
-        background: red;
+        outline: 1px solid red;
         display: flex;
         justify-content: center;
+        width: 30px;
         align-items: center;
         aspect-ratio: 1;
         transition: all 0.3s ease-in-out;
-        flex-basis: 30px;
         flex-shrink: 0;
-      }
-
-      .iconLink img {
-        display: none;
       }
 
       .iconLink:hover img {
@@ -161,7 +165,7 @@ export class HFooter extends LitElement {
       .iconLink p {
         margin: 0;
         margin-top: 3px;
-        display: flex;
+        display: block;
       }
 
       .footerColumn:first-of-type {
