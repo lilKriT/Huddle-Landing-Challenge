@@ -97,7 +97,6 @@ export class HFooter extends LitElement {
         margin: 0;
         padding: 0;
         box-sizing: box-content;
-        outline: 1px solid red;
       }
 
       footer {
