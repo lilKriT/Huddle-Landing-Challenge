@@ -174,6 +174,7 @@ export class HFooter extends LitElement {
       .footerColumn:first-of-type {
         flex-grow: 4;
         align-items: flex-start;
+        padding-right: 10rem;
       }
 
       a {
