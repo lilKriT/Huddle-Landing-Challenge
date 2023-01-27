@@ -43,6 +43,7 @@ export class HCTA extends LitElement {
         transform: translateY(200px);
         padding: 3rem;
         transition: all 0.3s ease-in-out;
+        margin: 0 5%;
       }
 
       .cta:hover {

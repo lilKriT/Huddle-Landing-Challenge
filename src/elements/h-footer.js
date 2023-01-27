@@ -97,6 +97,7 @@ export class HFooter extends LitElement {
         margin: 0;
         padding: 0;
         box-sizing: box-content;
+        outline: 1px solid red;
       }
 
       footer {
@@ -113,6 +114,7 @@ export class HFooter extends LitElement {
         gap: 2rem;
         flex-direction: column;
         align-items: center;
+        margin: 0 5%;
       }
 
       .logo {
@@ -174,7 +176,7 @@ export class HFooter extends LitElement {
       .footerColumn:first-of-type {
         flex-grow: 4;
         align-items: flex-start;
-        padding-right: 10rem;
+        padding-right: min(10%, 10rem);
       }
 
       a {
@@ -240,10 +242,6 @@ export class HFooter extends LitElement {
       }
 
       @media screen and (max-width: 768px) {
-        .wrapper {
-          padding: 10px;
-        }
-
         .content {
           flex-direction: column;
         }
